@@ -1,0 +1,26 @@
+[package]
+authors    =["Thor Kampefner <thorck@pm.me>"]
+description="""cch23-12"""
+edition    ="2021"
+license    ="Apache2.0 OR MIT"
+name       ="cch23-12"
+repository ="https://github.com/thor314/cch23-12"
+version    ="0.1.0"
+
+[dependencies]
+anyhow   ="1.0"
+cute = "0.3.0"
+tracing = "0.1"
+tracing-subscriber={ version="0.3", features=["env-filter", "fmt"] }
+tokio = { version = "1", features = ["full"] }
+futures = "0.3" 
+thiserror="1.0"
+env_logger = "0.11"
+ 
+axum = { version = "0.7.3", features = ["macros"] }
+shuttle-axum = "0.39.0"
+shuttle-runtime = { version = "0.39", default-features = false }
+serde = { version = "1.0.196", features = ["derive"] }
+shuttle-secrets = "0.39.0"
+[dev-dependencies]
+rstest    ="0.18"         # testing convenience proc-macros
